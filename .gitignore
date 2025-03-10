@@ -1,0 +1,7 @@
+bin/
+obj/
+*.http
+*.sin
+.vs/
+appsettings.Development.json
+appsettings.json
