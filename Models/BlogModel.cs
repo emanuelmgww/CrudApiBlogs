@@ -14,7 +14,7 @@ namespace CrudApiBlogs.Models
         public DateTime DataCriacao { get; private set; } 
         public DateTime DataEdicao { get; private set; } 
         public DateTime? DataDelecao { get; private set; } 
-        public bool UsuarioAtivo { get; set; } = true;
+        public bool BlogAtivo { get; set; } = true;
 
         public BlogModel(string nomeUsusario, string titulo, string conteudo)
         {
@@ -35,7 +35,7 @@ namespace CrudApiBlogs.Models
 
         public void DeletarBlog()
         {
-            UsuarioAtivo = false; 
+            BlogAtivo = false; 
             DataDelecao = DateTime.UtcNow; 
         }
     }
