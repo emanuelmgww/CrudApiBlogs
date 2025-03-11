@@ -13,7 +13,7 @@ namespace CrudApiBlogs.Models
         public string Conteudo { get; set; }
         public DateTime DataCriacao { get; private set; } 
         public DateTime DataEdicao { get; private set; } 
-        public DateTime? DataDelecao { get; private set; } 
+        public DateTime? DataDelecao { get; set; } 
         public bool BlogAtivo { get; set; } = true;
 
         public BlogModel(string nomeUsusario, string titulo, string conteudo)

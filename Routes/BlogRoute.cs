@@ -50,6 +50,8 @@ namespace CrudApiBlogs.Routes
 
                 blog.EditarBlog(req.Titulo, req.Conteudo);
 
+                context.Update(blog);
+
                 await context.SaveChangesAsync();
                 return Results.Ok(blog);
             });
@@ -64,6 +66,7 @@ namespace CrudApiBlogs.Routes
                 }
 
                 blog.DeletarBlog();
+                context.Update(blog);
                 await context.SaveChangesAsync();
                 return Results.Ok(blog);
             });
